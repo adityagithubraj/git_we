@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+    <style>
+#nev{
+    width: 100%;
+    height: 70px;
+    background-color: yellow;
+}
+#contenor{
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 200px;
+    margin-top: 50px;
+    gap: 20px;
+}
+#contenor>div{
+    font-size: 20px;
+}#contenor>div:nth-child(1){
+    background-color: red;
+}
+#contenor>div:nth-child(2){
+    background-color: green;
+}
+#contenor>div:nth-child(3){
+    background-color:blue;
+}
+#contenor>div:nth-child(4){
+    background-color:gray;
+}
+
+@media all and (min-width:550px) and (max-width:700px){ 
+    #contenor{
+
+
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: 200px 200px;
+
+    
+}
+   
+}#contenor>div:nth-child(1){
+    order:7;
+}
+#contenor>div:nth-child(2){
+    order:9;
+}
+#contenor>div:nth-child(3){
+    order:8;
+}
+#contenor>div:nth-child(4){
+    order:10;
+}
+
+@media all and (min-width:320px) and (max-width:550px){ 
+    #contenor{
+
+
+grid-template-columns: repeat(1,1fr);
+grid-template-rows: repeat(4,100px)
+
+    
+}
+   
+}#contenor>div:nth-child(1){
+    order:7;
+}
+#contenor>div:nth-child(2){
+    order:9;
+}
+#contenor>div:nth-child(3){
+    order:10;
+}
+#contenor>div:nth-child(4){
+    order:8;
+}
+    </style>
+</head>
+<body>
+    <div id="nev">
+        <h1>Navigeter</h1>
+    </div>
+<div id="contenor">
+    
+    <div>Box1</div>
+    <div>Box2</div>
+    <div>Box3</div>
+    <div>Box4</div>
+</div>
+    
+
+</body>
+</html>
